@@ -892,14 +892,14 @@ p { color: var(--text-secondary); }
 
 .tech-badge--css {
   background: linear-gradient(135deg, #264de4, #2965f1);
-  bottom: 20%; left: -40px;
+  bottom: 10%; left: -40px;
   animation-delay: 1s;
 }
 
 .tech-badge--js {
   background: linear-gradient(135deg, #f7df1e, #e6c817);
   color: #1a1a1a;
-  top: 10%; right: -20px;
+  top: 20%; right: -40px;
   animation-delay: 2s;
 }
 
@@ -935,13 +935,13 @@ p { color: var(--text-secondary); }
   }
 
   .tech-badge--css {
-    top: 10px;
-    right: -20px;
+    bottom: 10px;
+    left: -10px;
   }
 
   .tech-badge--js {
-    bottom: 10px;
-    left: -10px;
+    top: 10px;
+    right: -10px;
   }
 
   .tech-badge--php {
