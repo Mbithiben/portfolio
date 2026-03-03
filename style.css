@@ -913,35 +913,26 @@ p { color: var(--text-secondary); }
 ================================ */
 @media (max-width: 768px) {
 
-   .hero-visual {
-    margin-top: 40px;
-    position: relative;
-    /* Add these lines to give it height */
-    min-height: 300px; /* Adjust this value to match your visual's height */
-    width: 100%;       /* Ensure it spans the width */
-  }
-
-  /* Ensure your badges are visible and not hidden by overflow */
-  .tech-badge {
-    font-size: 11px;
-    padding: 5px 8px;
-    z-index: 10; /* Ensures they sit on top */
-  }
-
-  .hero-section {
+ .hero-section {
     flex-direction: column;
     text-align: center;
   }
 
-  .hero-visual {
-    margin-top: 40px;
-    position: relative;
-  }
 
-  .tech-badge {
-    font-size: 11px;
-    padding: 5px 8px;
-  }
+.hero-visual {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
+  grid-template-rows: repeat(2, 1fr);
+  gap: 10px;
+  padding: 20px;
+  min-height: 300px;
+}
+
+.tech-badge {
+  /* No need for top/left/absolute! */
+  justify-self: center;
+  align-self: center;
+}
 
   .tech-badge--html {
     top: 5%;
