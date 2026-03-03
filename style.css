@@ -936,12 +936,12 @@ p { color: var(--text-secondary); }
 
   .tech-badge--css {
     top: 10px;
-    right: -20px;
+    right: -10px;
   }
 
   .tech-badge--js {
     bottom: 10px;
-    left: -20px;
+    left: -10px;
   }
 
   .tech-badge--php {
