@@ -935,13 +935,13 @@ p { color: var(--text-secondary); }
   }
 
   .tech-badge--css {
-    top: 20px;
-    right: -10px;
+    top: 10px;
+    right: -20px;
   }
 
   .tech-badge--js {
-    bottom: 20px;
-    left: -10px;
+    bottom: 10px;
+    left: -20px;
   }
 
   .tech-badge--php {
