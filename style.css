@@ -908,7 +908,48 @@ p { color: var(--text-secondary); }
   bottom: 10%; right: -10px;
   animation-delay: 3s;
 }
+/* ===============================
+   MOBILE HERO FIX
+================================ */
+@media (max-width: 768px) {
 
+  .hero-section {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-visual {
+    margin-top: 40px;
+  }
+
+  .tech-badge {
+    display: block !important;
+    position: absolute;
+    font-size: 12px;
+    padding: 6px 10px;
+  }
+
+  .tech-badge--html {
+    top: -10px;
+    left: 10px;
+  }
+
+  .tech-badge--css {
+    top: 20px;
+    right: -10px;
+  }
+
+  .tech-badge--js {
+    bottom: 20px;
+    left: -10px;
+  }
+
+  .tech-badge--php {
+    bottom: -10px;
+    right: 10px;
+  }
+
+}
 
 /* ================================================================
    11. ABOUT SECTION
