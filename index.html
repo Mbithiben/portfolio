@@ -1,0 +1,821 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <!-- ============================================================
+       META & SEO
+  ============================================================ -->
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Ben Mbithi – Full Stack Web Developer based in Kenya. Specializing in HTML, CSS, JavaScript, PHP, and MySQL. Available for freelance projects and collaborations." />
+  <meta name="keywords" content="Ben Mbithi, Full Stack Developer, Web Developer, Kenya, PHP, JavaScript, MySQL, Portfolio" />
+  <meta name="author" content="Ben Mbithi" />
+
+  <!-- Open Graph / Social Sharing -->
+  <meta property="og:title" content="Ben Mbithi | Full Stack Web Developer" />
+  <meta property="og:description" content="Portfolio of Ben Mbithi – Full Stack Web Developer based in Kenya." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://benmbithi.dev" />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Ben Mbithi | Full Stack Web Developer" />
+  <meta name="twitter:description" content="Portfolio of Ben Mbithi – Full Stack Web Developer based in Kenya." />
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="favicon.svg" />
+  <link rel="apple-touch-icon" href="favicon.svg" />
+
+  <title>Ben Mbithi | Full Stack Web Developer</title>
+
+  <!-- ============================================================
+       FONTS & ICONS
+  ============================================================ -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+  <!-- Boxicons for UI icons -->
+  <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+
+  <!-- ============================================================
+       STYLESHEET
+  ============================================================ -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+  <!-- ============================================================
+       SIDEBAR NAVIGATION
+  ============================================================ -->
+  <aside class="sidebar" id="sidebar" aria-label="Main navigation">
+
+    <!-- Logo / Brand -->
+    <div class="sidebar__brand">
+      <a href="#hero" class="sidebar__logo" aria-label="Ben Mbithi Home">
+        <span class="logo-icon"><img src="Benahlogo.jpg" alt="Ben"></span>
+        <span class="logo-text">Ben Mbithi</span>
+      </a>
+      <!-- Mobile close button -->
+      <button class="sidebar__close" id="sidebarClose" aria-label="Close navigation">
+        <i class="bx bx-x"></i>
+      </button>
+    </div>
+
+    <!-- Navigation Links -->
+    <nav class="sidebar__nav">
+      <ul class="nav-list" role="list">
+        <li class="nav-item">
+          <a href="#hero" class="nav-link active" data-section="hero">
+            <i class="bx bx-home-alt nav-icon"></i>
+            <span class="nav-label">Home</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#about" class="nav-link" data-section="about">
+            <i class="bx bx-user nav-icon"></i>
+            <span class="nav-label">About</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#skills" class="nav-link" data-section="skills">
+            <i class="bx bx-code-alt nav-icon"></i>
+            <span class="nav-label">Skills</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#projects" class="nav-link" data-section="projects">
+            <i class="bx bx-folder nav-icon"></i>
+            <span class="nav-label">Projects</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#services" class="nav-link" data-section="services">
+            <i class="bx bx-briefcase nav-icon"></i>
+            <span class="nav-label">Services</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a href="#contact" class="nav-link" data-section="contact">
+            <i class="bx bx-envelope nav-icon"></i>
+            <span class="nav-label">Contact</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <!-- Sidebar Footer: Theme Toggle + Social -->
+    <div class="sidebar__footer">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <i class="bx bx-moon" id="themeIcon"></i>
+        <span id="themeLabel">Light Mode</span>
+      </button>
+      <div class="sidebar__social">
+        <a href="https://github.com/benmbithi" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+          <i class="bx bxl-github"></i>
+        </a>
+        <a href="https://linkedin.com/in/Paul mbithi" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+          <i class="bx bxl-linkedin"></i>
+        </a>
+        <a href="https://wa.me/254745825574" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+          <i class="bx bxl-whatsapp"></i>
+        </a>
+      </div>
+    </div>
+  </aside>
+
+  <!-- Sidebar Overlay (mobile) -->
+  <div class="sidebar-overlay" id="sidebarOverlay" aria-hidden="true"></div>
+
+  <!-- ============================================================
+       MAIN CONTENT
+  ============================================================ -->
+  <main class="main-content" id="mainContent">
+
+    <!-- ── TOP BAR (mobile) ─────────────────────────────────── -->
+    <header class="topbar" id="topbar">
+      <button class="topbar__menu" id="menuToggle" aria-label="Open navigation menu">
+        <i class="bx bx-menu"></i>
+      </button>
+      <span class="topbar__brand">Ben Mbithi</span>
+      <button class="topbar__theme" id="topbarTheme" aria-label="Toggle theme">
+        <i class="bx bx-moon" id="topbarThemeIcon"></i>
+      </button>
+    </header>
+
+    <!-- ============================================================
+         HERO SECTION
+    ============================================================ -->
+    <section class="section hero-section" id="hero">
+      <!-- Animated background blobs -->
+      <div class="hero-bg">
+        <div class="blob blob--1"></div>
+        <div class="blob blob--2"></div>
+        <div class="blob blob--3"></div>
+      </div>
+
+      <div class="hero-content">
+        <!-- Greeting badge -->
+        <div class="hero-badge animate-fade-up" style="--delay: 0.1s">
+          <span class="badge-dot"></span>
+          <span>Available for Freelance Work</span>
+        </div>
+
+        <!-- Name & Title -->
+        <h1 class="hero-name animate-fade-up" style="--delay: 0.2s">
+          Hi, I'm <span class="gradient-text">Bernad Mbithi</span>
+        </h1>
+        <div class="hero-title animate-fade-up" style="--delay: 0.3s">
+          <span class="typed-text" id="typedText"></span><span class="cursor">|</span>
+        </div>
+
+        <!-- Bio -->
+        <p class="hero-bio animate-fade-up" style="--delay: 0.4s">
+          A passionate Full Stack Web Developer based in <strong>Nairobi, Kenya</strong>,
+          crafting clean, performant, and user-centric digital experiences.
+          I turn ideas into elegant, functional web solutions.
+        </p>
+
+        <!-- CTA Buttons -->
+        <div class="hero-cta animate-fade-up" style="--delay: 0.5s">
+          <a href="#projects" class="btn btn--primary">
+            <i class="bx bx-folder-open"></i> View Projects
+          </a>
+          <a href="#contact" class="btn btn--outline">
+            <i class="bx bx-envelope"></i> Contact Me
+          </a>
+        </div>
+
+        <!-- Stats row -->
+        <div class="hero-stats animate-fade-up" style="--delay: 0.6s">
+          <div class="stat">
+            <span class="stat__number" data-count="30">0</span><span class="stat__plus">+</span>
+            <span class="stat__label">Projects Done</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat__number" data-count="5">0</span><span class="stat__plus">+</span>
+            <span class="stat__label">Years Experience</span>
+          </div>
+          <div class="stat-divider"></div>
+          <div class="stat">
+            <span class="stat__number" data-count="20">0</span><span class="stat__plus">+</span>
+            <span class="stat__label">Happy Clients</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero visual / avatar -->
+      <div class="hero-visual animate-fade-left" style="--delay: 0.3s">
+        <div class="avatar-frame">
+          <div class="avatar-inner">
+            <div class="avatar-initials">Best in</div>
+          </div>
+          <!-- Floating tech badges -->
+          <div class="tech-badge tech-badge--html">HTML5</div>
+          <div class="tech-badge tech-badge--css">CSS3</div>
+          <div class="tech-badge tech-badge--js">JS</div>
+          <div class="tech-badge tech-badge--php">PHP</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         ABOUT SECTION
+    ============================================================ -->
+    <section class="section about-section" id="about">
+      <div class="section-container">
+
+        <!-- Section header -->
+        <div class="section-header animate-fade-up">
+          <span class="section-tag">Get To Know Me</span>
+          <h2 class="section-title">About <span class="gradient-text">Me</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="about-grid">
+          <!-- About image card -->
+          <div class="about-image-wrap animate-fade-right">
+            <div class="about-image-card">
+              <div class="about-avatar"><img src="ben (3).jpg" alt="Ben Mbithi"></div>
+              <div class="about-image-decoration"></div>
+            </div>
+            <div class="about-info-card">
+              <i class="bx bx-map-pin"></i>
+              <div>
+                <strong>Location</strong>
+                <span>Nairobi, Kenya</span>
+              </div>
+            </div>
+          </div>
+
+          <!-- About text -->
+          <div class="about-text animate-fade-left">
+            <h3 class="about-subtitle">Full Stack Web Developer &amp; Problem Solver</h3>
+            <p class="about-description">
+              I'm Ben Mbithi, a dedicated Full Stack Web Developer with over 5 years of
+              experience building robust web applications and digital solutions. I specialize
+              in both front-end and back-end development, delivering seamless user experiences
+              backed by solid server-side logic.
+            </p>
+            <p class="about-description">
+              Based in Nairobi, Kenya, I work with clients across Africa and beyond,
+              helping businesses establish a powerful online presence. My approach combines
+              technical excellence with creative problem-solving to deliver solutions that
+              truly make an impact.
+            </p>
+
+            <!-- Tech stack pills -->
+            <div class="tech-stack">
+              <span class="tech-pill"><i class="bx bxl-html5"></i> HTML5</span>
+              <span class="tech-pill"><i class="bx bxl-css3"></i> CSS3</span>
+              <span class="tech-pill"><i class="bx bxl-javascript"></i> JavaScript</span>
+              <span class="tech-pill"><i class="bx bxl-php"></i> PHP</span>
+              <span class="tech-pill"><i class="bx bx-data"></i> MySQL</span>
+            </div>
+
+            <!-- Download CV -->
+            <a href="assets\icons\Ben_Mbithi_Modern_Tech_CV(1).pdf" download class="btn btn--primary btn--icon-left">
+              <i class="bx bx-download"></i> Download CV
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SKILLS SECTION
+    ============================================================ -->
+    <section class="section skills-section" id="skills">
+      <div class="section-container">
+
+        <div class="section-header animate-fade-up">
+          <span class="section-tag">What I Know</span>
+          <h2 class="section-title">My <span class="gradient-text">Skills</span></h2>
+          <div class="section-line"></div>
+        </div>
+
+        <div class="skills-grid">
+
+          <!-- Technical Skills (progress bars) -->
+          <div class="skills-bars animate-fade-right">
+            <h3 class="skills-category-title">Technical Proficiency</h3>
+
+            <div class="skill-item" data-percent="95">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="bx bxl-html5 skill-icon skill-icon--html"></i>
+                  <span>HTML5</span>
+                </div>
+                <span class="skill-percent">95%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="95"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="90">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="bx bxl-css3 skill-icon skill-icon--css"></i>
+                  <span>CSS3 / SASS</span>
+                </div>
+                <span class="skill-percent">90%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="90"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="85">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="bx bxl-javascript skill-icon skill-icon--js"></i>
+                  <span>JavaScript (ES6+)</span>
+                </div>
+                <span class="skill-percent">85%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="85"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="88">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="bx bxl-php skill-icon skill-icon--php"></i>
+                  <span>PHP</span>
+                </div>
+                <span class="skill-percent">88%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="88"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="82">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="bx bx-data skill-icon skill-icon--mysql"></i>
+                  <span>MySQL</span>
+                </div>
+                <span class="skill-percent">82%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="82"></div>
+              </div>
+            </div>
+
+            <div class="skill-item" data-percent="78">
+              <div class="skill-header">
+                <div class="skill-name">
+                  <i class="bx bxl-git skill-icon skill-icon--git"></i>
+                  <span>Git &amp; GitHub</span>
+                </div>
+                <span class="skill-percent">78%</span>
+              </div>
+              <div class="skill-bar">
+                <div class="skill-progress" data-width="78"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Soft Skills / Tool Cards -->
+          <div class="skills-cards animate-fade-left">
+            <h3 class="skills-category-title">Tools &amp; Expertise</h3>
+            <div class="tool-cards-grid">
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--blue">
+                  <i class="bx bxl-html5"></i>
+                </div>
+                <span>HTML5</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--indigo">
+                  <i class="bx bxl-css3"></i>
+                </div>
+                <span>CSS3</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--yellow">
+                  <i class="bx bxl-javascript"></i>
+                </div>
+                <span>JavaScript</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--purple">
+                  <i class="bx bxl-php"></i>
+                </div>
+                <span>PHP</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--teal">
+                  <i class="bx bx-data"></i>
+                </div>
+                <span>MySQL</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--orange">
+                  <i class="bx bxl-git"></i>
+                </div>
+                <span>Git</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--dark">
+                  <i class="bx bxl-github"></i>
+                </div>
+                <span>GitHub</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--green">
+                  <i class="bx bx-server"></i>
+                </div>
+                <span>cPanel</span>
+              </div>
+              <div class="tool-card">
+                <div class="tool-card__icon tool-card__icon--red">
+                  <i class="bx bx-code-block"></i>
+                </div>
+                <span>VS Code</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         PROJECTS SECTION
+    ============================================================ -->
+    <section class="section projects-section" id="projects">
+      <div class="section-container">
+
+        <div class="section-header animate-fade-up">
+          <span class="section-tag">My Work</span>
+          <h2 class="section-title">Recent <span class="gradient-text">Projects</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">A selection of projects I've built with passion and precision.</p>
+        </div>
+
+        <div class="projects-grid">
+
+          <!-- Project Card 1 -->
+          <article class="project-card animate-fade-up" style="--delay: 0.1s">
+            <div class="project-card__image">
+              <img src="project1.jpg" alt="Project Management Dashboard" loading="lazy" />
+              <div class="project-card__overlay">
+                <div class="project-card__overlay-content">
+                  <a href="#" class="btn btn--sm btn--white" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bx-link-external"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/benmbithi" class="btn btn--sm btn--outline-white" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Project Management Dashboard</h3>
+              <p class="project-card__desc">
+                A full-featured project management web app with task tracking, team collaboration,
+                file uploads, and real-time progress monitoring built with PHP and MySQL.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--html">HTML</span>
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--js">JavaScript</span>
+                <span class="tag tag--php">PHP</span>
+                <span class="tag tag--mysql">MySQL</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="#" class="btn btn--sm btn--primary" target="_blank" rel="noopener noreferrer">
+                  <i class="bx bx-link-external"></i> Live Demo
+                </a>
+                <a href="https://github.com/benmbithi" class="btn btn--sm btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="bx bxl-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 2 -->
+          <article class="project-card animate-fade-up" style="--delay: 0.2s">
+            <div class="project-card__image">
+              <img src="project2.png" alt="E-Commerce Platform" loading="lazy" />
+              <div class="project-card__overlay">
+                <div class="project-card__overlay-content">
+                  <a href="#" class="btn btn--sm btn--white" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bx-link-external"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/benmbithi" class="btn btn--sm btn--outline-white" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">E-Commerce Platform</h3>
+              <p class="project-card__desc">
+                A responsive e-commerce website with product catalog, shopping cart, M-Pesa
+                payment integration, order management, and an admin dashboard.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--html">HTML</span>
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--js">JavaScript</span>
+                <span class="tag tag--php">PHP</span>
+                <span class="tag tag--mysql">MySQL</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="#" class="btn btn--sm btn--primary" target="_blank" rel="noopener noreferrer">
+                  <i class="bx bx-link-external"></i> Live Demo
+                </a>
+                <a href="https://github.com/benmbithi" class="btn btn--sm btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="bx bxl-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project Card 3 -->
+          <article class="project-card animate-fade-up" style="--delay: 0.3s">
+            <div class="project-card__image">
+              <img src="project3.png" alt="Laundry Management System" loading="lazy" />
+              <div class="project-card__overlay">
+                <div class="project-card__overlay-content">
+                  <a href="#" class="btn btn--sm btn--white" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bx-link-external"></i> Live Demo
+                  </a>
+                  <a href="https://github.com/benmbithi" class="btn btn--sm btn--outline-white" target="_blank" rel="noopener noreferrer">
+                    <i class="bx bxl-github"></i> GitHub
+                  </a>
+                </div>
+              </div>
+            </div>
+            <div class="project-card__body">
+              <h3 class="project-card__title">Laundry Management System</h3>
+              <p class="project-card__desc">
+                A complete business management system for laundry shops featuring order tracking,
+                customer management, billing, SMS notifications, and analytics reports.
+              </p>
+              <div class="project-card__tags">
+                <span class="tag tag--html">HTML</span>
+                <span class="tag tag--css">CSS</span>
+                <span class="tag tag--js">JavaScript</span>
+                <span class="tag tag--php">PHP</span>
+                <span class="tag tag--mysql">MySQL</span>
+              </div>
+              <div class="project-card__actions">
+                <a href="#" class="btn btn--sm btn--primary" target="_blank" rel="noopener noreferrer">
+                  <i class="bx bx-link-external"></i> Live Demo
+                </a>
+                <a href="https://github.com/benmbithi" class="btn btn--sm btn--ghost" target="_blank" rel="noopener noreferrer">
+                  <i class="bx bxl-github"></i> GitHub
+                </a>
+              </div>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         SERVICES SECTION
+    ============================================================ -->
+    <section class="section services-section" id="services">
+      <div class="section-container">
+
+        <div class="section-header animate-fade-up">
+          <span class="section-tag">What I Offer</span>
+          <h2 class="section-title">My <span class="gradient-text">Services</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Professional services tailored to your digital needs.</p>
+        </div>
+
+        <div class="services-grid">
+
+          <!-- Service 1 -->
+          <div class="service-card animate-fade-up" style="--delay: 0.1s">
+            <div class="service-card__icon">
+              <i class="bx bx-globe"></i>
+            </div>
+            <h3 class="service-card__title">Website Development</h3>
+            <p class="service-card__desc">
+              Custom, responsive websites built from scratch using modern HTML, CSS, and JavaScript.
+              From landing pages to complex multi-page sites — pixel-perfect and performance-optimized.
+            </p>
+            <ul class="service-card__list">
+              <li><i class="bx bx-check"></i> Responsive Design</li>
+              <li><i class="bx bx-check"></i> SEO Optimization</li>
+              <li><i class="bx bx-check"></i> Cross-browser Compatible</li>
+              <li><i class="bx bx-check"></i> Fast Load Times</li>
+            </ul>
+            <a href="#contact" class="service-card__link">
+              Get Started <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+
+          <!-- Service 2 -->
+          <div class="service-card service-card--featured animate-fade-up" style="--delay: 0.2s">
+            <div class="service-card__badge">Most Popular</div>
+            <div class="service-card__icon">
+              <i class="bx bx-cog"></i>
+            </div>
+            <h3 class="service-card__title">System Development</h3>
+            <p class="service-card__desc">
+              Full-stack web applications and management systems built with PHP and MySQL.
+              Inventory systems, POS, school management, hospital systems, and more.
+            </p>
+            <ul class="service-card__list">
+              <li><i class="bx bx-check"></i> Custom Database Design</li>
+              <li><i class="bx bx-check"></i> User Authentication</li>
+              <li><i class="bx bx-check"></i> Admin Dashboards</li>
+              <li><i class="bx bx-check"></i> API Integration</li>
+            </ul>
+            <a href="#contact" class="service-card__link">
+              Get Started <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+
+          <!-- Service 3 -->
+          <div class="service-card animate-fade-up" style="--delay: 0.3s">
+            <div class="service-card__icon">
+              <i class="bx bx-server"></i>
+            </div>
+            <h3 class="service-card__title">Website Hosting Setup</h3>
+            <p class="service-card__desc">
+              Complete hosting configuration, domain setup, SSL certificate installation,
+              and cPanel management. Get your website live, fast, and secure.
+            </p>
+            <ul class="service-card__list">
+              <li><i class="bx bx-check"></i> Domain Registration</li>
+              <li><i class="bx bx-check"></i> SSL Certificate Setup</li>
+              <li><i class="bx bx-check"></i> cPanel Configuration</li>
+              <li><i class="bx bx-check"></i> Email Setup</li>
+            </ul>
+            <a href="#contact" class="service-card__link">
+              Get Started <i class="bx bx-right-arrow-alt"></i>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         CONTACT SECTION
+    ============================================================ -->
+    <section class="section contact-section" id="contact">
+      <div class="section-container">
+
+        <div class="section-header animate-fade-up">
+          <span class="section-tag">Let's Talk</span>
+          <h2 class="section-title">Get In <span class="gradient-text">Touch</span></h2>
+          <div class="section-line"></div>
+          <p class="section-subtitle">Have a project in mind? Let's build something great together.</p>
+        </div>
+
+        <div class="contact-grid">
+
+          <!-- Contact Info -->
+          <div class="contact-info animate-fade-right">
+            <h3 class="contact-info__title">Contact Information</h3>
+            <p class="contact-info__desc">
+              I'm always open to discussing new projects, creative ideas, or opportunities to be
+              part of your vision. Feel free to reach out!
+            </p>
+
+            <div class="contact-info__items">
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <i class="bx bx-map-pin"></i>
+                </div>
+                <div>
+                  <strong>Location</strong>
+                  <span>Nairobi, Kenya</span>
+                </div>
+              </div>
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <i class="bx bx-envelope"></i>
+                </div>
+                <div>
+                  <strong>Email</strong>
+                  <a href="mailto:mbithipaul05@gmail.com">mbithipaul05@gmail.com</a>
+                </div>
+              </div>
+              <div class="contact-info__item">
+                <div class="contact-info__icon">
+                  <i class="bx bxl-whatsapp"></i>
+                </div>
+                <div>
+                  <strong>WhatsApp</strong>
+                  <a href="https://wa.me/254745825574" target="_blank" rel="noopener noreferrer">+254 745 825 574</a>
+                </div>
+              </div>
+            </div>
+
+            <!-- Social links -->
+            <div class="contact-social">
+              <a href="https://github.com/benmbithi" class="social-btn social-btn--github" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                <i class="bx bxl-github"></i>
+              </a>
+              <a href="https://linkedin.com/in/benmbithi" class="social-btn social-btn--linkedin" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i class="bx bxl-linkedin"></i>
+              </a>
+              <a href="https://wa.me/254745825574" class="social-btn social-btn--whatsapp" target="_blank" rel="noopener noreferrer" aria-label="WhatsApp">
+                <i class="bx bxl-whatsapp"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="contact-form-wrap animate-fade-left">
+            <form class="contact-form" id="contactForm" novalidate>
+              <div class="form-row">
+                <div class="form-group">
+                  <label for="name" class="form-label">Full Name</label>
+                  <div class="form-input-wrap">
+                    <i class="bx bx-user form-input-icon"></i>
+                    <input type="text" id="name" name="name" class="form-input" placeholder="John Doe" required />
+                  </div>
+                  <span class="form-error" id="nameError"></span>
+                </div>
+                <div class="form-group">
+                  <label for="email" class="form-label">Email Address</label>
+                  <div class="form-input-wrap">
+                    <i class="bx bx-envelope form-input-icon"></i>
+                    <input type="email" id="email" name="email" class="form-input" placeholder="mbithipaul05@gmail.com" required />
+                  </div>
+                  <span class="form-error" id="emailError"></span>
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="subject" class="form-label">Subject</label>
+                <div class="form-input-wrap">
+                  <i class="bx bx-edit form-input-icon"></i>
+                  <input type="text" id="subject" name="subject" class="form-input" placeholder="Project Inquiry" />
+                </div>
+              </div>
+              <div class="form-group">
+                <label for="message" class="form-label">Message</label>
+                <div class="form-input-wrap form-input-wrap--textarea">
+                  <i class="bx bx-message-detail form-input-icon form-input-icon--textarea"></i>
+                  <textarea id="message" name="message" class="form-input form-textarea" placeholder="Tell me about your project..." rows="5" required></textarea>
+                </div>
+                <span class="form-error" id="messageError"></span>
+              </div>
+              <button type="submit" class="btn btn--primary btn--full" id="submitBtn">
+                <span class="btn-text"><i class="bx bx-send"></i> Send Message</span>
+                <span class="btn-loading" hidden>
+                  <span class="spinner"></span> Sending...
+                </span>
+              </button>
+              
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============================================================
+         FOOTER
+    ============================================================ -->
+    <footer class="footer">
+      <div class="footer-inner">
+        <p class="footer-copy">
+          &copy; <span id="footerYear"></span> <strong>Ben Mbithi</strong>. Crafted with
+          <i class="bx bxs-heart" style="color: #ef4444;"></i> in Nairobi, Kenya.
+        </p>
+        <div class="footer-links">
+          <a href="#hero">Home</a>
+          <a href="#about">About</a>
+          <a href="#projects">Projects</a>
+          <a href="#contact">Contact</a>
+        </div>
+      </div>
+    </footer>
+
+  </main><!-- /.main-content -->
+
+  <!-- ============================================================
+       WHATSAPP FLOATING BUTTON
+  ============================================================ -->
+  <a href="https://wa.me/254700000000" class="whatsapp-float" target="_blank" rel="noopener noreferrer" aria-label="Chat on WhatsApp">
+    <i class="bx bxl-whatsapp"></i>
+    <span class="whatsapp-float__tooltip">Chat on WhatsApp</span>
+  </a>
+
+  <!-- Scroll to top button -->
+  <button class="scroll-top" id="scrollTop" aria-label="Scroll to top">
+    <i class="bx bx-chevron-up"></i>
+  </button>
+
+  <!-- ============================================================
+       SCRIPTS
+  ============================================================ -->
+  <script src="main.js"></script>
+</body>
+</html>
