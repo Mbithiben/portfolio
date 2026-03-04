@@ -911,27 +911,26 @@ p { color: var(--text-secondary); }
 /* ===============================
    MOBILE HERO FIX
 ================================ */
-@media (max-width: 768px) {
 
- .hero-section {
-    flex-direction: column;
-    text-align: center;
+
+@media (max-width: 768px) {
+  /* ... existing styles ... */
+
+  .tech-badge {
+    position: static; /* This is the key: breaks them out of absolute flow */
+    margin: 0;        /* Reset margins */
+    width: auto;      /* Let them size naturally */
+    transform: none;  /* Remove animations if they get jerky */
+    animation: none;  /* Optional: disable animations on mobile for stability */
   }
 
-
-.hero-visual {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* Creates a 2x2 grid */
-  grid-template-rows: repeat(2, 1fr);
-  gap: 10px;
-  padding: 20px;
-  min-height: 300px;
-}
-
-.tech-badge {
-  /* No need for top/left/absolute! */
-  justify-self: center;
-  align-self: center;
+  .hero-visual {
+    /* Keep your grid layout */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 10px;
+    padding: 20px;
+  }
 }
 
   .tech-badge--html {
