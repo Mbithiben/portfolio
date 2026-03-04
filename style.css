@@ -912,47 +912,20 @@ p { color: var(--text-secondary); }
    MOBILE HERO FIX
 ================================ */
 
-
-@media (max-width: 768px) {
-  /* ... existing styles ... */
-
-  .tech-badge {
-    position: static; /* This is the key: breaks them out of absolute flow */
-    margin: 0;        /* Reset margins */
-    width: auto;      /* Let them size naturally */
-    transform: none;  /* Remove animations if they get jerky */
-    animation: none;  /* Optional: disable animations on mobile for stability */
-  }
-
-  .hero-visual {
-    /* Keep your grid layout */
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 10px;
-    padding: 20px;
-  }
+/* Hide on desktop by default */
+.tech-stack-mobile {
+  display: none;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+  margin-top: 20px;
 }
 
-  .tech-badge--html {
-    top: 5%;
-    left: 5%;
+/* Show and style only on mobile */
+@media (max-width: 768px) {
+  .tech-stack-mobile {
+    display: flex;
   }
-
-  .tech-badge--css {
-    bottom: 5%;
-    left: 5%;
-  }
-
-  .tech-badge--js {
-    top: 5%;
-    right: 5%;
-  }
-
-  .tech-badge--php {
-    bottom: 5%;
-    right: 5%;
-  }
-
 }
 
 /* ================================================================
